@@ -3,54 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <title>Warning</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
 <style>
     body {
-        background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
-        color: white;
-        text-align: center;
-        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #1cc7c7, #159e9e);
     }
 
+    .bubble {
+        position: fixed;
+        bottom: -100px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+        animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+        0% { transform: translateY(0) scale(1); opacity: 0.5; }
+        100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
+
+    .bubble:nth-child(1) { left: 10%; width: 40px; height: 40px; animation-duration: 8s; }
+    .bubble:nth-child(2) { left: 25%; width: 60px; height: 60px; animation-duration: 12s; }
+    .bubble:nth-child(3) { left: 50%; width: 30px; height: 30px; animation-duration: 7s; }
+    .bubble:nth-child(4) { left: 70%; width: 80px; height: 80px; animation-duration: 14s; }
+    .bubble:nth-child(5) { left: 85%; width: 50px; height: 50px; animation-duration: 10s; }
+
     .thanks {
-        font-size: 36px;
-        font-weight: bold;
-        margin-top: 30px;
-        color: #ffd700;
-        text-shadow: 0 0 10px #ff0, 0 0 20px #ffa500;
+        font-size: 55px;
+        margin-top: 40px;
+        color: #ffffff;
+        text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
     }
 
     .bubble-text {
-        font-size: 42px;
-        font-weight: bold;
-        color: #fff;
+        font-size: 65px;
+        margin: 30px auto;
+        width: 90%;
+        color: #ff8bd1;
         text-shadow:
-            0 0 5px #00f,
-            0 0 10px #00f,
-            0 0 20px #00f,
-            0 0 40px #0ff;
-        margin-top: 40px;
-        padding: 20px;
+            4px 4px 0 #b94fa0,
+            8px 8px 20px rgba(0,0,0,0.3);
     }
 
     .video-container {
         margin-top: 40px;
         display: flex;
         justify-content: center;
+        margin-bottom: 60px;
     }
 
     iframe {
         width: 80%;
         max-width: 720px;
         height: 405px;
-        border-radius: 12px;
+        border-radius: 20px;
         border: none;
-        box-shadow: 0 0 25px rgba(0,0,0,0.6);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .footer {
+        font-size: 45px;
+        margin: 40px 20px 60px;
+        color: #ff8bd1;
+        text-shadow:
+            3px 3px 0 #b94fa0,
+            6px 6px 15px rgba(0,0,0,0.3);
     }
 </style>
 </head>
+
 <body>
+
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
 
 <div class="thanks">
     ⭐ BIG THANKS TO ZR AND ADRINE ⭐
@@ -62,6 +97,10 @@
 
 <div class="video-container">
     <iframe src="https://www.youtube.com/embed/og2d5niB09A" allowfullscreen></iframe>
+</div>
+
+<div class="footer">
+    fuck chef fuck azome and fuck frost fuck wesky as well
 </div>
 
 </body>
